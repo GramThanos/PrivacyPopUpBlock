@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "PrivacyPopUpBlock",
 	"description": "Blocks pop-ups that asks about privacy and cookies preferences.",
-	"version": "0.2",
+	"version": "0.3",
 	"options_page": "options.html",
 	"background": {
 		"scripts": ["js/utils.js", "js/background.js"],
@@ -10,9 +10,9 @@
 	},
 	"content_scripts": [
 		{
-		"matches": ["http://*/*", "https://*/*"],
-		"js": ["js/content.js"],
-		"run_at": "document_start"
+			"matches": ["http://*/*", "https://*/*"],
+			"js": ["js/content.js"],
+			"run_at": "document_start"
 		}
 	],
 	"icons": {
@@ -30,8 +30,6 @@
 		"storage",
 		"unlimitedStorage",
 		"tabs",
-		"webRequest",
-		"webRequestBlocking",
 		"<all_urls>"
 	],
 	"web_accessible_resources": [

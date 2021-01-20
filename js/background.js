@@ -13,6 +13,7 @@ function initBackground() {
     utils.getSettings(function(value) {
         pbSettings = value;
 
+        /*
         HTTPGetText(Browser.runtime.getURL('assets/filters.txt'), function() {
             if (pbSettings['pbFilters']) {
                 let data = this.responseText;
@@ -24,9 +25,11 @@ function initBackground() {
         }, function (err) {
             console.log('Error: ', err);
         });
+        */
     });
 }
 
+/*
 function HTTPGetText(url, handleReqListener, handleReqError) {
     var oReq = new XMLHttpRequest();
     oReq.onload = handleReqListener;
@@ -34,6 +37,7 @@ function HTTPGetText(url, handleReqListener, handleReqError) {
     oReq.open('get', url, true);
     oReq.send();
 }
+*/
 
 function updateIcon(status, ctabId) {
     let icon = (status === true) ? startIcon : pauseIcon;
